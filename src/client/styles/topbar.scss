@@ -1,0 +1,27 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+//colors
+$blue-light:#039be5 ;
+$blue-dark: #224681 ;
+$my-gold:  #FFD700;
+
+//fonts
+$roboto-slab: 'Roboto Slab', serif;
+
+.topbar {
+    padding: 7px;
+    margin: 0px;
+    background-color: $blue-light;
+    grid-area: top;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    #appName {
+        margin-left: 20px;
+        font-size: 1.6em;
+        font-family: $roboto-slab;
+        color: $my-gold;
+    }
+}

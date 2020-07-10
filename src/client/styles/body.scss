@@ -1,0 +1,167 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+//colors
+$blue-light:#039be5 ;
+$blue-dark: #224681 ;
+$my-gold:  #FFD700;
+$old-paper: #f2eecb;
+
+//fonts
+$pt: PT Sans, serif;
+$lato: Lato, serif;
+.body {
+    background-image: linear-gradient(to bottom right, $blue-light, $blue-dark);
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows:auto auto;
+        grid-template-areas: 
+        "sel" 
+        "res";
+    .selector {
+        width: 95%;
+        margin: 0px;
+        padding: 0px;
+        grid-area: sel;
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: space-around;
+        .inputholder
+        {
+
+            padding-left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+            border: 2px solid $blue-light;
+            border-radius: 4px;
+            &:hover {
+                background: $blue-light;
+            }
+            .inputText {
+                font-family: $pt;
+                color: $my-gold;
+                width: 15%;
+                margin: 0px;
+                padding:0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            input {
+                margin: 0px;
+                margin-left: 50px;
+                width: 40%;
+                height: 25px;
+                background: $old-paper;
+                font-family: $pt;
+                font-weight: bolder;
+                align-items: center;
+                justify-content: space-evenly ;
+            }
+        }
+        
+        button {
+            width: 50%;
+            height: 30px;
+            background: $blue-light;
+            border-radius: 10px;
+            border: 0px;
+            
+            margin-bottom: 15px;
+            -webkit-transition: color 1s ease-out;
+            -moz-transition: color 1s ease-out;
+            -o-transition: color 1s ease-out;
+            -ms-transition: color 1s ease-out;
+            transition: color 1s ease-out;
+            &:hover {
+                background: $my-gold;
+                cursor: pointer;
+            }
+        }
+    }
+    .results{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        
+        h1 {
+            margin-left: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+            color: $my-gold;
+        }
+
+    .result {
+        background-image: linear-gradient(to bottom right, #87CEEB, #00CCFF);
+        border: 1px solid #444;
+        width: 100%;
+        height: 100%;
+        background-origin: 1px solid black;
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 50% 50%;
+        .countryPicture {
+            margin:0px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            img {
+                //border-radius: 10%;
+                //border-collapse: separate; 
+            }
+        }
+        .tripInfo {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .textInfo {
+                padding: 7px;
+                font-family: $lato;
+                border: 1px solid $old-paper;
+                width: 60%;
+                border-radius: 10px;
+                font-size: 1em;
+                background-color: $blue-light;
+                color: $blue-dark;
+                
+                cursor: default;
+            }
+        }
+    }
+}
+    
+}
+
+
+@media (min-width: 900px) {
+    .body {
+        grid-template-rows: 1fr;
+        grid-template-columns: 35% 65%;
+        grid-template-areas: "sel" "res";  
+        .selector {
+            align-items: flex-start;
+            .inputholder {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

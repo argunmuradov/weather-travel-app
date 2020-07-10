@@ -1,0 +1,7 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><title>Test</title><script src="../../../dist/main.js"></script></head><body><dir class="container"><dir class="topbar"><div id="appName">Travel Planner</div></dir><dir class="body"><dir class="selector"><dir class="inputholder"><dir class="inputText">Destination:</dir><input id="location" placeholder="e.g Moscow"></dir><dir class="inputholder"><dir class="inputText">Arrival:</dir><input id="date1" placeholder="dd/mm/yyyy"></dir><dir class="inputholder"><dir class="inputText">Departure:</dir><input id="date2" placeholder="dd/mm/yyyy"></dir><button>Add Trip!</button></dir><dir class="results"><h1>My Trips</h1></dir></dir><footer>Created by <a href="https://www.linkedin.com/in/argunmuradov/">Argun Muradov</a> for the Udacity Front End Web Developer Nanodegree.</footer></dir><script>// Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }</script><script src="main.js"></script></body></html>

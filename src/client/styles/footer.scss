@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Rubik);
+
+//fonts
+$footer : Rubik, serif;
+footer {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+        
+    }
+    text-align: center;
+    font-family: $footer;
+}
